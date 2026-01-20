@@ -57,7 +57,7 @@ function randomStatus(): ArticleStatus {
 export function generateArticles(count = 200): Article[] {
   const now = Date.now();
 
-  return Array.from({ length: count }, (_, i) => {
+  return Array.from({ length: count }, () => {
     const category = pick(CATEGORIES);
     const region = pick(REGIONS);
     const status = randomStatus();
